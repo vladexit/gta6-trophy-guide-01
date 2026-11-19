@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI — Trophy Tracker &amp; Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>GTA VI Trophy Tracker</h1>
+  <p>All 55 PlayStation 5 trophies of Grand Theft Auto VI — guide, checklist &amp; roadmap. Works fully offline.</p>
+</header>
+
+<div class="wrap">
+
+  <section class="card">
+    <div class="progress-row">
+      <div class="pct" id="pct">0 / 55 · 0%</div>
+      <div class="bar"><div id="barfill"></div></div>
+    </div>
+    <div class="btns">
+      <button id="exportBtn" type="button">Export progress (JSON)</button>
+      <label class="filebtn" for="importFile">Import progress (JSON)</label>
+      <input type="file" id="importFile" accept=".json,application/json">
+      <button id="resetBtn" type="button" class="danger">Reset all</button>
+    </div>
+  </section>
+
+  <section class="card roadmap" id="roadmap">
+    <h2><span class="num">Roadmap</span> to the Platinum</h2>
+    <p><b>Platinum: “Vice Got a Price!”</b> — about 200 hours, difficulty 4/10. Every trophy is single-player; there are no online trophies and no DLC trophies at launch.</p>
+    <ol>
+      <li><b>Play the story first.</b> Finish all five chapters and the final mission. Story trophies pop as you go, and the story unlocks stranger missions, activities and map areas.</li>
+      <li><b>Clear the stranger strands.</b> Follow the “?” markers (Andy, Kenton, Billy, Randy, Tyrone, Bret, Cal) and finish each strand — including the Silver for 8 strands.</li>
+      <li><b>Work the activities.</b> Shooting Range golds, drone races, card sets, WAiNK It spots, meditation spots and the 100-vehicle discovery run.</li>
+      <li><b>Grind the crime trophies.</b> Bank vaults, armored trucks, shop robberies with your partner, Marked Bills laundering.</li>
+      <li><b>Cleanup.</b> 250 stunts, 50 challenges, the 100% completion checklist (35 tasks) for the Gold “A Long Road” — then the Platinum pops.</li>
+    </ol>
+    <div class="warn">
+      <b>Missables &amp; warnings.</b>
+      “Positive Mental Attitude” (meditate at every spot) is the one possible missable — do it as you explore and don’t rush past meditation spots.
+      There is <b>no mission replay</b>, so keep a manual save at the start of each chapter.
+      <b>Cheats disable trophies and saving</b> — never turn cheats on in a trophy run.
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="controls">
+      <input type="search" id="search" placeholder="Search a trophy by name…" aria-label="Search trophies">
+      <div class="filter-group" id="tierFilters">
+        <span>Tier:</span>
+        <button type="button" data-tier="all" class="active">All</button>
+        <button type="button" data-tier="Platinum">Platinum</button>
+        <button type="button" data-tier="Gold">Gold</button>
+        <button type="button" data-tier="Silver">Silver</button>
+        <button type="button" data-tier="Bronze">Bronze</button>
+      </div>
+      <div class="filter-group" id="kindFilters">
+        <span>Kind:</span>
+        <button type="button" data-kind="all" class="active">All</button>
+        <button type="button" data-kind="Story">Story</button>
+        <button type="button" data-kind="Strangers">Strangers</button>
+        <button type="button" data-kind="Crime">Crime</button>
+        <button type="button" data-kind="Activities">Activities</button>
+        <button type="button" data-kind="Hidden">Hidden</button>
+        <button type="button" data-kind="Milestone">Milestone</button>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="spoilerToggle" checked>
+        Hide story spoilers until earned
+      </label>
+    </div>
+  </section>
+
+  <main class="grid" id="grid"></main>
+  <div class="empty" id="empty" hidden>No trophies match your filters.</div>
+
+  <footer>
+    <b>Sources:</b> trophy names, descriptions and grades from the official GTA VI trophy list as reported by TrueAchievements and GTABase (launch day, 19 November 2026); Platinum time/difficulty estimate via PowerPyx. Guides on this page are written in our own words — they draw on other guides and cite them, never copying their text.
+    <br>Original fan-made tracker. Not affiliated with Rockstar Games. No Rockstar logo or official artwork is used.
+  </footer>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
